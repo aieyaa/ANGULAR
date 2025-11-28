@@ -3,23 +3,25 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-index',
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './index.html',
   styleUrls: ['./index.css']
 })
-export class IndexComponent {
-  title = 'VERA';
-  email: string = '';
-  password: string = '';
+ export class IndexComponent {
+   title = 'VERA';
+   email: string = '';
+   password: string = '';
 
-  constructor(private router: Router) {}
+constructor(private router: Router) {}
 
-  login() {
+   login() {
     if (this.email === 'admin@a' && this.password === '1234') {
       localStorage.setItem('token', 'ok');
       this.router.navigate(['/home']);
     } else {
-      alert("Identifiants incorrects");
+      alert('Identifiants incorrects');
     }
   }
 }

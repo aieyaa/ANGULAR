@@ -6,4 +6,4 @@ selector: 'app-about',
 templateUrl: './form.html',
 styleUrls: ['./form.css']
 })
-export class FormComponent { }
+export class PageComponent { }
